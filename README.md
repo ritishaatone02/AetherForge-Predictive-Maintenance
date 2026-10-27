@@ -61,9 +61,6 @@ Sensor Data → Deep Learning Prediction → Knowledge Retrieval → Actionable 
 1. Clone this repository
 2. Install the required libraries:
 
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn tensorflow joblib
-
 ##  Author
 
 **Ritisha Atone**
