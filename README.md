@@ -1,47 +1,68 @@
 # AetherForge – Predictive Asset Failure Intelligence System
 
-##  Project Overview
+## Project Overview
 
-AetherForge is a predictive maintenance project designed to estimate the Remaining Useful Life (RUL) of turbofan engines using sensor data and deep learning.
+AetherForge is an end-to-end **Predictive Asset Failure Intelligence System** designed to estimate the Remaining Useful Life (RUL) of turbofan engines using multivariate sensor data and deep learning.
 
-The project explores how predictive analytics can help identify potential equipment failures and support maintenance planning.
+Unlike traditional predictive maintenance systems that only provide numerical risk scores, AetherForge connects sensor-based predictions with technical knowledge to generate more useful maintenance insights.
 
-##  Technologies Used
+**Core Flow:**  
+Sensor Data → Deep Learning Prediction → Knowledge Retrieval → Actionable Recommendations
 
-* Python
-* Pandas and NumPy
-* Matplotlib and Seaborn
-* Scikit-learn
-* LSTM Deep Learning
-* TF-IDF-based document retrieval
+## Dataset
 
-##  Project Workflow
+- **NASA CMAPSS FD001** (Turbofan Engine Degradation Simulation)
+- 100 training engines + 100 test engines
+- Multivariate time-series data including vibration, temperature, pressure, and other sensor readings
 
-1. Explore and analyze sensor data.
-2. Preprocess the time-series data.
-3. Prepare sequential data for model training.
-4. Train an LSTM model to estimate Remaining Useful Life.
-5. Evaluate model performance using MAE and RMSE.
-6. Explore document retrieval for maintenance-related information.
+## Technologies Used
 
-##  Project Objectives
+- **Python**
+- **Pandas & NumPy** – Data processing
+- **Matplotlib & Seaborn** – Data visualization
+- **Scikit-learn** – Preprocessing and evaluation
+- **TensorFlow / Keras (LSTM)** – Deep Learning model for RUL prediction
+- **TF-IDF** – Document retrieval for maintenance knowledge
 
-* Estimate equipment Remaining Useful Life.
-* Explore predictive maintenance techniques.
-* Analyze sensor patterns associated with equipment degradation.
-* Support data-driven maintenance planning.
+## Project Workflow
 
-##  Repository Contents
+1. Exploratory Data Analysis of sensor data
+2. Data cleaning and removal of constant sensors
+3. Feature selection and normalization
+4. Sequence creation for time-series modeling
+5. LSTM model training for RUL prediction
+6. Model evaluation using MAE and RMSE
+7. Document retrieval using TF-IDF
+8. Generation of intelligence reports with risk level and recommended actions
 
-* `AetherForge.ipynb` — Jupyter Notebook containing the project implementation.
-* `README.md` — Project documentation.
+## Model Performance (FD001 Test Set)
 
-##  How to Run
+| Metric | Value  |
+|--------|--------|
+| MAE    | 16.67  |
+| RMSE   | 24.45  |
 
-1. Install Python and Jupyter Notebook.
-2. Install the required libraries.
-3. Download the notebook and required dataset.
-4. Open the notebook and execute the cells in order.
+## Project Objectives
+
+- Estimate Remaining Useful Life of industrial assets
+- Analyze sensor patterns associated with equipment degradation
+- Build a deep learning model for time-series RUL prediction
+- Connect predictions with technical knowledge for better decision support
+- Demonstrate an end-to-end predictive maintenance pipeline
+
+## Repository Contents
+
+- `AetherForge.ipynb` — Complete project implementation (EDA to End-to-End pipeline)
+- `README.md` — Project documentation
+- `models/` — Saved LSTM model and scaler (optional)
+
+## How to Run
+
+1. Clone this repository
+2. Install the required libraries:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn tensorflow joblib
 
 ##  Author
 
